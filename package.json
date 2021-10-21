@@ -4,6 +4,7 @@
   "description": "my first template generator",
   "main": "index.js",
   "scripts": {
+    "lint": "eslint src/ --ext .ts",
     "start": "ts-node src/index.ts",
     "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
   },
@@ -14,6 +15,9 @@
     "@types/inquirer": "^8.1.3",
     "@types/node": "^16.11.2",
     "@types/shelljs": "^0.8.9",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
+    "eslint": "^8.0.1",
     "nodemon": "^2.0.14",
     "shx": "^0.3.3",
     "ts-node": "^10.3.0",

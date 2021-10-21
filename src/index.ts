@@ -33,15 +33,15 @@ const CURR_DIR = process.cwd();
 inquirer.prompt(QUESTIONS).then(answers => {
     const projectChoice = answers['template'];
     const projectName = answers['name'];
-    //@ts-ignore
+    
     const templatePath = path.join(__dirname, 'templates', projectChoice);
-    //@ts-ignore
+   
     const tartgetPath = path.join(CURR_DIR, projectName);
     
     const options: CliOptions = {
-        //@ts-ignore
+      
         projectName,
-        //@ts-ignore
+        
         templateName: projectChoice,
         templatePath,
         tartgetPath
@@ -51,7 +51,6 @@ inquirer.prompt(QUESTIONS).then(answers => {
         return;
     }
 
-    //@ts-ignore
     createDirectoryContents(templatePath, projectName);
 
     postProcess(options);
