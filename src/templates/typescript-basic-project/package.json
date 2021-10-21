@@ -4,9 +4,13 @@
     "license": "MIT",
     "main": "index.ts",
     "scripts": {
+        "lint": "eslint src/ --ext .ts",
         "start": "ts-node src/index.ts"
     },
     "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.1.0",
+        "@typescript-eslint/parser": "^5.1.0",
+        "eslint": "^8.0.1",
         "nodemon": "^2.0.14",
         "ts-node": "^10.3.0",
         "tslint": "^6.1.3",
