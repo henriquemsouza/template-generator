@@ -7,7 +7,7 @@
 yarn
 ```
 
-## run
+## Run
 ```sh
 yarn start
 ```

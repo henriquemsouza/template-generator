@@ -4,12 +4,13 @@ import * as fs from 'fs';
 import * as path from 'path';
 import * as shell from 'shelljs';
 import * as inquirer from 'inquirer';
-import chalk from 'chalk';
 
 import * as template from './utils/template';
 
 import { Questions } from './interfaces/questions-interfaces';
 import { CliOptions } from './interfaces/options-interfaces';
+import { errorMessage, successMessage } from './utils/message';
+
 
 const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
 const QUESTIONS: Questions[] = [
@@ -46,7 +47,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
     if (!createProject(targetPath)) {
         return;
     }
-    console.log(chalk.green("🏁 starting project creation 🏁"));
+    successMessage("🏁 starting project creation 🏁");
 
     createDirectoryContents(templatePath, projectName);
 
@@ -55,7 +56,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
 
 function createProject(projectPath: string) {
     if (fs.existsSync(projectPath)) {
-        console.log(chalk.red(`❌ Folder ${projectPath} already exists. Delete or use another name ❌`));
+        errorMessage(`❌ Folder ${projectPath} already exists. Delete or use another name ❌`);
         return false;
     }
     fs.mkdirSync(projectPath);
@@ -106,7 +107,7 @@ function postProcess(options: CliOptions) {
         }
     }
 
-    console.log(chalk.green("🎉 🚀 Successfully created 🚀 🎉"));
+    successMessage("🎉 🚀 Successfully created 🚀 🎉");
 
     return true;
 }
