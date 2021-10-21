@@ -2,13 +2,17 @@
 
 import * as fs from 'fs';
 import * as path from 'path';
+import * as shell from 'shelljs';
 import * as inquirer from 'inquirer';
 import chalk from 'chalk';
+
 import * as template from './utils/template';
-import * as shell from 'shelljs';
+
+import { Questions } from './interfaces/questions-interfaces';
+import { CliOptions } from './interfaces/options-interfaces';
 
 const CHOICES = fs.readdirSync(path.join(__dirname, 'templates'));
-const QUESTIONS = [
+const QUESTIONS: Questions[] = [
 {
     name: 'template',
     type: 'list',
@@ -21,12 +25,6 @@ const QUESTIONS = [
     message: 'Please input a new project name:'
 }];
 
-export interface CliOptions {
-    projectName: string
-    templateName: string
-    templatePath: string
-    tartgetPath: string
-}
 
 const CURR_DIR = process.cwd();
 
@@ -36,18 +34,16 @@ inquirer.prompt(QUESTIONS).then(answers => {
     
     const templatePath = path.join(__dirname, 'templates', projectChoice);
    
-    const tartgetPath = path.join(CURR_DIR, projectName);
+    const targetPath = path.join(CURR_DIR, projectName);
     
     const options: CliOptions = {
-      
         projectName,
-        
         templateName: projectChoice,
         templatePath,
-        tartgetPath
+        targetPath
     }
 
-    if (!createProject(tartgetPath)) {
+    if (!createProject(targetPath)) {
         return;
     }
 
@@ -58,7 +54,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
 
 function createProject(projectPath: string) {
     if (fs.existsSync(projectPath)) {
-        console.log(chalk.red(`Folder ${projectPath} exists. Delete or use another name.`));
+        console.log(chalk.red(`❌ Folder ${projectPath} exists. Delete or use another name ❌`));
         return false;
     }
     fs.mkdirSync(projectPath);
@@ -99,12 +95,12 @@ function createDirectoryContents(templatePath: string, projectName: string) {
 function postProcess(options: CliOptions) {
     const isNode = fs.existsSync(path.join(options.templatePath, 'package.json'));
     if (isNode) {
-        shell.cd(options.tartgetPath);
+        shell.cd(options.targetPath);
         const result = shell.exec('npm install');
         if (result.code !== 0) {
             return false;
         }
     }
-    
+    console.log("🎉 🚀 Successfully created 🚀 🎉")
     return true;
 }
