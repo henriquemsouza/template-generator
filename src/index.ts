@@ -46,6 +46,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
     if (!createProject(targetPath)) {
         return;
     }
+    console.log(chalk.green("🏁 starting project creation 🏁"));
 
     createDirectoryContents(templatePath, projectName);
 
@@ -54,7 +55,7 @@ inquirer.prompt(QUESTIONS).then(answers => {
 
 function createProject(projectPath: string) {
     if (fs.existsSync(projectPath)) {
-        console.log(chalk.red(`❌ Folder ${projectPath} exists. Delete or use another name ❌`));
+        console.log(chalk.red(`❌ Folder ${projectPath} already exists. Delete or use another name ❌`));
         return false;
     }
     fs.mkdirSync(projectPath);
@@ -62,7 +63,10 @@ function createProject(projectPath: string) {
     return true;
 }
 
-const SKIP_FILES = ['node_modules', '.template.json'];
+const SKIP_FILES = [
+    'node_modules',
+   '.template.json'
+];
 
 function createDirectoryContents(templatePath: string, projectName: string) {
    
@@ -101,6 +105,8 @@ function postProcess(options: CliOptions) {
             return false;
         }
     }
-    console.log("🎉 🚀 Successfully created 🚀 🎉")
+
+    console.log(chalk.green("🎉 🚀 Successfully created 🚀 🎉"));
+
     return true;
 }
