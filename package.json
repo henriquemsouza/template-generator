@@ -1,7 +1,7 @@
 {
   "name": "template-generator",
   "version": "1.0.0",
-  "description": "my first template generator",
+  "description": "A CLI with some basic templates",
   "main": "index.js",
   "scripts": {
     "lint": "eslint src/ --ext .ts",
@@ -10,7 +10,7 @@
     "build": "yarn clean && tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
   },
   "author": "Henrique Martins de Souza",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "@types/ejs": "^3.1.0",
     "@types/inquirer": "^8.1.3",
