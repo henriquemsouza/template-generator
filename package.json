@@ -6,7 +6,8 @@
   "scripts": {
     "lint": "eslint src/ --ext .ts",
     "start": "ts-node src/index.ts",
-    "build": "tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
+    "clean": "rm -rf dist/ && rm -rf .build/",
+    "build": "yarn clean && tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
   },
   "author": "Henrique Martins de Souza",
   "license": "ISC",

@@ -15,13 +15,11 @@
     "plugins": [
         "@typescript-eslint"
     ],
-    "rules": { 
+    "rules": {
         "eol-last": ["error", "always"],
         "camelcase": "off",
         "dot-notation": "off",
         "no-useless-constructor": "off",
         "no-unused-expressions": "off"
-    },
-    "ignoreDuringBuilds": true,
-    "ignorePatterns": ["src/templates/*"]
+    }
 }
