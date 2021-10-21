@@ -9,12 +9,17 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-        "ecmaVersion": 13,
+        "ecmaVersion": 2019,
         "sourceType": "module"
     },
     "plugins": [
         "@typescript-eslint"
     ],
     "rules": {
+        "eol-last": ["error", "always"],
+        "camelcase": "off",
+        "dot-notation": "off",
+        "no-useless-constructor": "off",
+        "no-unused-expressions": "off"
     }
 }

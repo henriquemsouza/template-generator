@@ -15,7 +15,7 @@
     "plugins": [
         "@typescript-eslint"
     ],
-    "rules": {
+    "rules": { 
         "eol-last": ["error", "always"],
         "camelcase": "off",
         "dot-notation": "off",
