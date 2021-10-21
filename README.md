@@ -1,6 +1,6 @@
 
 
-# Template Generator
+# CLI Template Generator
 
 ## Install
 
@@ -22,7 +22,13 @@ npm start
 npm link
 ```
 
+After link you can run in any folder
+```sh
+generate-template
+```
+
 
 | TEMPLATES|  DESCRIPTION|
 |--|--|
-| typescript-basic-project | generates a clean project with typescript set |
+| serverless-lambda  | Generates a serverless lambda project with typescript  |
+| typescript-basic-project | Generates a clean project with typescript set |
