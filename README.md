@@ -15,7 +15,13 @@ The currently existing templates are
 ***
 ***
 ## Getting started
-### Install
+
+### Install as a global
+```sh
+npm i  -g templates-generator
+```
+***
+### Install the project after clone
 
 ```sh
 yarn
