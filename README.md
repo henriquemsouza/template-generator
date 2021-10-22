@@ -14,19 +14,19 @@ The currently existing templates are
 
 ***
 ***
-
-## Install
+## Getting started
+### Install
 
 ```sh
 yarn
 ```
 
-## Build
+### Build
 ```sh
 yarn build
 ```
 
-## Execute
+### Execute
 ```sh
 npm start
 ```
