@@ -1,9 +1,9 @@
 import { OK } from 'http-status';
 import { injectable } from 'inversify';
-import HttpResponse from '../../../shared/responses/HttpResponse';
-import ExceptionHandler from '../../../shared/decorators/ExceptionHandler';
-import { UseCase } from '../../../shared/contracts';
-import { SampleResponse } from './interfaces/SampleInterface';
+import HttpResponse from '../../../../shared/responses/HttpResponse';
+import ExceptionHandler from '../../../../shared/decorators/ExceptionHandler';
+import { UseCase } from '../../../../shared/contracts';
+import { SampleResponse } from '../interfaces/SampleInterface';
 
 @injectable()
 
