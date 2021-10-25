@@ -16,6 +16,14 @@ The currently existing templates are
 ***
 ## Getting started
 
+### How to run
+after installing the CLI via npm run the command below and select the desired template
+
+```sh
+templates-generator
+```
+***
+
 ### Install as a global
 ```sh
 npm i  -g templates-generator
@@ -43,7 +51,7 @@ npm link
 
 After link you can run in any folder
 ```sh
-generate-template
+templates-generator
 ```
 
 
