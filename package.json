@@ -1,6 +1,6 @@
 {
   "name": "templates-generator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A CLI with some basic templates",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,10 @@
     "build": "yarn clean && tsc && shx rm -rf dist/templates && shx cp -r src/templates dist"
   },
   "author": "Henrique Martins de Souza",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/henriquemsouza/template-generator.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/ejs": "^3.1.0",
