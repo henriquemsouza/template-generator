@@ -32,17 +32,17 @@ npm i  -g templates-generator
 ### Install the project after clone
 
 ```sh
-yarn
+npm install
 ```
 
 ### Build
 ```sh
-yarn build
+npm run build
 ```
 
 ### Execute
 ```sh
-npm start
+npm run start
 ```
 ### or
 ```sh
