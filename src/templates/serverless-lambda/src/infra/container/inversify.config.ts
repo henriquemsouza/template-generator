@@ -1,10 +1,12 @@
-import { Container } from 'inversify';
+import { Container } from "inversify";
 
-import RandomSampleContainer from '../../modules/RandomSample/RandomSampleContainer';
-import { Newable } from '../../shared/types';
+import RandomSampleContainer from "../../modules/RandomSample/RandomSampleContainer";
+import { Newable } from "../../shared/types";
+import AxiosHttpHandler from "../http/AxiosHttpHandler";
 
+const container = new Container({ defaultScope: "Singleton" });
 
-const container = new Container({ defaultScope: 'Singleton' });
+container.bind<AxiosHttpHandler>(AxiosHttpHandler).toSelf();
 
 container.load(RandomSampleContainer);
 

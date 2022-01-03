@@ -6,7 +6,7 @@
     "description": "Lorem lorem Change me",
     "scripts": {
         "lint": "eslint src/ --ext .ts",
-        "routes": "node -r ts-node/register ./helpers/ShowServerRoutes.ts",
+        "routes": "node -r ts-node/register ./helpers/server.routes.ts",
         "clean": "rm -rf dist/ && rm -rf .build/",
         "start:dev": "SLS_DEBUG=* && node --inspect ./node_modules/.bin/sls offline --watch --config serverless-dev.yml -s dev --noPrependStageInUrl"
     },

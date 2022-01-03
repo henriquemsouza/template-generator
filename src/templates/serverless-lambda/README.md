@@ -16,3 +16,27 @@ yarn start:dev
 ```sh
 yarn routes
 ```
+
+## Folder Structure (/root)
+```
+.
+├── helpers
+└── src
+    ├── infra
+    │   ├── config
+    │   └── container
+    ├── modules
+    │   └── RandomSample
+    │       └── Sample
+    │           ├── interfaces
+    │           └── useCases
+    ├── server
+    ├── shared
+    │   ├── adapters
+    │   ├── contracts
+    │   ├── decorators
+    │   ├── exceptions
+    │   ├── responses
+    │   └── types
+    └── utils
+```
