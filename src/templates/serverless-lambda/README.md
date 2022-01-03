@@ -2,14 +2,22 @@
 # Serverless Lambda Template
 
 
-## Install
+# HOW TO RUN:
+## 1. Created an .env file based on the .env.sample file in the project root
+
+## 2. Install
 ```sh
 yarn
 ```
 
-## Run
+## 3. Run
 ```sh
 yarn start:dev
+```
+
+## Initial endpoint curl sample
+```curl
+curl --location --request GET 'http://localhost:3000/v1/sample/initial-route'
 ```
 
 ## List all routes created
