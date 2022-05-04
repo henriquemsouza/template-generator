@@ -1,12 +1,14 @@
 
 import chalk from 'chalk';
 
-const successMessage  = (message: string): void =>{
-    console.log(chalk.green(message));
-}
+const log = console.log;
 
+const successMessage  = (message: string): void =>{
+    log(chalk.green(message));
+}
+ 
 const errorMessage  = (message: string): void =>{
-    console.log(chalk.red(message));
+    log(chalk.red(message));
 }
 
 export {

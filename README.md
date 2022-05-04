@@ -55,3 +55,23 @@ templates-generator
 ```
 
 
+## Folder Structure for typescript-basic-project
+
+```sh
+.
+├── package.json
+├── README.md
+├── src
+│   ├── index.ts
+│   ├── interfaces
+│   │   └── sample.interface.ts
+│   ├── services
+│   │   └── sample.service.ts
+│   └── shared
+│       └── Logger.ts
+├── tsconfig.json
+├── tslint.json
+└── yarn.lock
+
+```
+
