@@ -9,6 +9,7 @@ The currently existing templates are
 
 | TEMPLATES|  DESCRIPTION|
 |--|--|
+| postgres-docker-compose   | Generates a basic docker compose with postgres  |
 | serverless-lambda  | Generates a serverless lambda project with typescript  |
 | typescript-basic-project | Generates a clean project with typescript set |
 
