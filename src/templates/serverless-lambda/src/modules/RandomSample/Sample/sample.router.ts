@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify';
 import { RequestRouter } from '../../../shared/contracts';
-import SampleCase from './useCases/SampleCase';
+import SampleCase from './useCases/sample.case';
 
 @injectable()
 export default class SampleRouter implements RequestRouter {

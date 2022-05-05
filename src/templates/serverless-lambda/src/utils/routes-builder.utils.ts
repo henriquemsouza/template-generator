@@ -1,7 +1,7 @@
 import { GetFromContainer } from '../infra/container/inversify.config';
 import { HeaderConvert, Newable } from '../shared/types';
 import { Router } from 'express';
-import ExpressRouterAdapter from '../shared/adapters/ExpressRouterAdapter';
+import ExpressRouterAdapter from '../shared/adapters/express-router.adapter';
 
 
 export const GenerateRoute = (obj: Newable, headerConvertion?: HeaderConvert) =>

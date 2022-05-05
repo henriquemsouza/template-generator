@@ -1,5 +1,5 @@
 import { TRestParameters, UnkownParams } from '../types';
-import HttpResponse from '../responses/HttpResponse';
+import HttpResponse from '../responses/http.response';
  
 export interface IPaginationRequestParams {
   skip?: number;

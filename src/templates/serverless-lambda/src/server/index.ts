@@ -1,9 +1,9 @@
 import express from "express";
 import cors from "cors";
-import { eventContext } from "aws-serverless-express/middleware";
 
-import ExpressRouteNotFoundAdapter from "../shared/adapters/ExpressRouteNotFoundAdapter";
-import Routes from "../modules/Routes";
+import { eventContext } from "aws-serverless-express/middleware";
+import ExpressRouteNotFoundAdapter from "../shared/adapters/express-route-not-found.adapter";
+import Routes from "../modules/routes";
 
 const server = express();
 

@@ -1,7 +1,7 @@
 import { HeaderConvert } from '../types';
 import { IHttpRequest, RequestRouter } from '../contracts';
 import { Request, Response } from 'express';
-import HttpResponse from '../responses/HttpResponse';
+import HttpResponse from '../responses/http.response';
 
 export default class ExpressRouterAdapter {
  

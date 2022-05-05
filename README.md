@@ -75,3 +75,29 @@ templates-generator
 
 ```
 
+## Folder Structure for serverless-lambda
+
+```sh
+
+.
+├── helpers
+└── src
+    ├── infra
+    │   ├── config
+    │   ├── container
+    │   └── http
+    ├── modules
+    │   └── RandomSample
+    │       └── Sample
+    │           ├── interfaces
+    │           └── useCases
+    ├── server
+    ├── shared
+    │   ├── adapters
+    │   ├── contracts
+    │   ├── exceptions
+    │   ├── responses
+    │   └── types
+    └── utils
+
+```

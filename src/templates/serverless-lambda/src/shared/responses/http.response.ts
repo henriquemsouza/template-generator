@@ -1,6 +1,6 @@
 import { IHttpError } from '../contracts';
 import { UnkownParams } from '../types';
-import GenericException from '../exceptions/GenericException';
+import GenericException from '../exceptions/generic.exception';
 
 interface HttpResponseSuccessParams<T> {
   statusCode?: number;

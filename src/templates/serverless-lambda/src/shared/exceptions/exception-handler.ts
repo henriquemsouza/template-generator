@@ -1,5 +1,5 @@
-import GenericException from '../exceptions/GenericException';
-import HttpResponse from '../responses/HttpResponse';
+import GenericException from './generic.exception';
+import HttpResponse from '../responses/http.response';
 
 export default function ExceptionHandler(customFn?: (e: Error) => any) {
   return (target: object, name: string | symbol, descriptor: PropertyDescriptor) => {

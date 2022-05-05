@@ -1,6 +1,6 @@
 import { Container } from "inversify";
 
-import RandomSampleContainer from "../../modules/RandomSample/RandomSampleContainer";
+import RandomSampleContainer from "../../modules/RandomSample/random-sample.container";
 import { Newable } from "../../shared/types";
 import AxiosHttpHandler from "../http/AxiosHttpHandler";
 

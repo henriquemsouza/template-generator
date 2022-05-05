@@ -1,6 +1,6 @@
 {
   "name": "templates-generator",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "A CLI with some basic templates",
   "main": "index.js",
   "scripts": {
@@ -33,6 +33,11 @@
     "inquirer": "^8.2.0",
     "shelljs": "^0.8.4"
   },
+  "keywords": [
+    "cli",
+    "typescript",
+    "serverless"
+  ],
   "bin": {
     "templates-generator": "./dist/index.js"
   }

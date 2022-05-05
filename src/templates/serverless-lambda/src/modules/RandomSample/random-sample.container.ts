@@ -1,6 +1,6 @@
 import { ContainerModule } from "inversify";
-import SampleCase from "./Sample/useCases/SampleCase";
-import SampleRouter from "./Sample/SampleRouter";
+import SampleCase from "./Sample/useCases/sample.case";
+import SampleRouter from "./Sample/sample.router";
 
 const RandomSampleContainer = new ContainerModule((bind) => {
   bind<SampleCase>(SampleCase).toSelf();

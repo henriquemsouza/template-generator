@@ -1,5 +1,5 @@
-import { RoutesBuilder } from "../../utils/RoutesBuilder";
-import SampleRouter from "./Sample/SampleRouter";
+import { RoutesBuilder } from "../../utils/routes-builder.utils";
+import SampleRouter from "./Sample/sample.router";
 
 const RandomSampleRoutes = new RoutesBuilder()
   .get("/initial-route", SampleRouter)
